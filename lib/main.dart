@@ -1,5 +1,5 @@
 import 'package:biblotheque/consttants.dart';
-import 'package:biblotheque/screens/home/home_screen.dart'; 
+import 'package:biblotheque/screens/home/home_screen.dart';
 import 'package:biblotheque/screens/splashScreen.dart';
 import 'package:biblotheque/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               displayColor: kBlackColor,
             ),
       ),
-      home: const SplashScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
@@ -56,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomeScreen();
+                        return SplashScreen();
                       },
                     ),
                   );

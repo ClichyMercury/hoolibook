@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../screens/drawer/TopicsScreen.dart';
+import '../screens/drawer/contributions.dart';
+import '../screens/drawer/favorites.dart';
+import '../screens/drawer/infos.dart';
+import '../screens/drawer/notesScreen.dart';
+import '../screens/drawer/updates.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -158,6 +163,24 @@ class NavigationDrawerWidget extends StatelessWidget {
             context, MaterialPageRoute(builder: (builder) => TopicsScreen()));
         break;
       case 1:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (builder) => FavoritesTopics()));
+        break;
+      case 2:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (builder) => NotesScreen()));
+        break;
+      case 3:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (builder) => UpdateScreen()));
+        break;
+      case 4:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (builder) => ContributionScreen()));
+        break;
+      case 5:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (builder) => InfosScreen()));
         break;
     }
   }

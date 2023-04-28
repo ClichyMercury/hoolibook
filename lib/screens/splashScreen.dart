@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../main.dart';
+import 'home/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,14 +17,14 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 5), (() {
       Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => WelcomeScreen()));
+          .pushReplacement(MaterialPageRoute(builder: (_) => HomeScreen()));
     }));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromRGBO(178, 188, 152, 1),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
